@@ -1,4 +1,4 @@
-package com.ethermail.androidchallenge.ui.theme
+package com.ethermail.androidchallenge.presentation.theme
 
 import android.app.Activity
 import android.os.Build

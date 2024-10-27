@@ -1,4 +1,4 @@
-package com.ethermail.androidchallenge.ui.theme
+package com.ethermail.androidchallenge.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
