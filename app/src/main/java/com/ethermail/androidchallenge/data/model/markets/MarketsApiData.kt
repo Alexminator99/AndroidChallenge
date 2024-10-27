@@ -1,9 +1,9 @@
 package com.ethermail.androidchallenge.data.model.markets
 
+import kotlinx.serialization.Serializable
 
-import com.google.gson.annotations.SerializedName
-
+@Serializable
 data class MarketsApiData(
-    @SerializedName("data") val marketData: List<MarketData>?,
-    @SerializedName("timestamp") val timestamp: Long?
+    val data: List<MarketData>?,
+    val timestamp: Long?
 )
