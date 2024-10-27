@@ -1,9 +1,9 @@
 package com.ethermail.androidchallenge.data.model.assets
 
+import kotlinx.serialization.Serializable
 
-import com.google.gson.annotations.SerializedName
-
+@Serializable
 data class AssetsApiData(
-    @SerializedName("data") val assetData: List<AssetData>?,
-    @SerializedName("timestamp") val timestamp: Long?
+    val data: List<AssetData>?,
+    val timestamp: Long?
 )

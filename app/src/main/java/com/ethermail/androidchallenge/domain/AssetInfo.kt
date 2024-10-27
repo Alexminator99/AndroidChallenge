@@ -1,9 +1,6 @@
-package com.ethermail.androidchallenge.data.model.assets
+package com.ethermail.androidchallenge.domain
 
-import kotlinx.serialization.Serializable
-
-@Serializable
-data class AssetData(
+data class AssetInfo(
     val changePercent24Hr: String?,
     val explorer: String?,
     val id: String?,
