@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.gradle)
 }
@@ -58,9 +59,10 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
-    implementation(libs.google.gson)
+    implementation(libs.kotlinx.serialization.json)
     implementation(libs.squareup.retrofit)
-    implementation(libs.squareup.retrofit.gson)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.squareup.retrofit.kotlin.serialization)
     implementation(libs.squareup.logginginterceptor)
     implementation(libs.squareup.mockwebserver)
 
