@@ -1,19 +1,22 @@
 [versions]
 agp = "8.7.1"
+androidxNavigation = "2.8.3"
 kotlin = "1.9.25"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.6"
+kotlinxSerializationJson = "1.6.3"
 activityCompose = "1.9.3"
 composeBom = "2024.10.00"
 androidxComposeCompiler = "1.5.15" #NOTE: is in use, called by :app module's build.gradle.kts
 gson = "2.10.1"
 retrofit = "2.11.0"
+retrofitKotlinxSerializationJson = "1.0.0"
 retrofitOkhttp = "4.12.0"
 androidxHilt = "1.2.0"
-pluginHilt = "2.51"
+pluginHilt = "2.51.1"
 ksp = "1.9.25-1.0.20"
 
 [libraries]
@@ -24,6 +27,9 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+androidx-navigation-testing = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxNavigation" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -32,17 +38,19 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidxHilt" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "pluginHilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "pluginHilt" }
 hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "pluginHilt" }
 google-gson = { group = "com.google.code.gson", name="gson", version.ref = "gson" }
 squareup-retrofit = { group = "com.squareup.retrofit2", name="retrofit", version.ref = "retrofit" }
-squareup-retrofit-gson = { group = "com.squareup.retrofit2", name="converter-gson", version.ref = "retrofit" }
+squareup-retrofit-kotlin-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitKotlinxSerializationJson" }
 squareup-logginginterceptor = { group = "com.squareup.okhttp3", name="logging-interceptor", version.ref = "retrofitOkhttp" }
 squareup-mockwebserver = { group = "com.squareup.okhttp3", name="logging-interceptor", version.ref = "retrofitOkhttp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt-gradle = { id = "com.google.dagger.hilt.android", version.ref = "pluginHilt" }
